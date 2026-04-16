@@ -10,7 +10,7 @@ class Ghostenv < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.0/ghostenv_0.1.0_darwin_amd64.tar.gz"
-      sha256 "00cc87379c261c4324459e46ce6956239144dc32000d4a6122101b3b1b13af36"
+      sha256 "9f94de82aa30071bc119e22662cdf0dd7797ccbafa327a5d2e314b3e5ef77614"
 
       define_method(:install) do
         bin.install "ghostenv"
@@ -19,7 +19,7 @@ class Ghostenv < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.0/ghostenv_0.1.0_darwin_arm64.tar.gz"
-      sha256 "2a5692c647f71fb21b3738bb38fae7f8df532aedd4fb92df40f4bfab3762f864"
+      sha256 "52e967a5b35c9b0d3bc1eab072073df8e9e108984b0064d3d7a130e75e8fa7fa"
 
       define_method(:install) do
         bin.install "ghostenv"
@@ -31,7 +31,7 @@ class Ghostenv < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.0/ghostenv_0.1.0_linux_amd64.tar.gz"
-      sha256 "563b4bfc088c61b9ceef927b0eaa5720cfe5aa39ad406e4830ffde555fb62a32"
+      sha256 "40f3496b1a580115aeba7c7f3995187435bfd4a3b10c9d5c4664999a0e14d1c6"
       define_method(:install) do
         bin.install "ghostenv"
         bin.install "ghostenv-keychain" if File.exist? "ghostenv-keychain"
@@ -39,7 +39,7 @@ class Ghostenv < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.0/ghostenv_0.1.0_linux_arm64.tar.gz"
-      sha256 "74dffcc1c66e3036877bcbce5e83169352f67193a2830d46fcd8f36197640fb2"
+      sha256 "35bace3b8f75dc817c2123300f54ed03b5fa2e1a1f227fa2c5e4189d73eea4f7"
       define_method(:install) do
         bin.install "ghostenv"
         bin.install "ghostenv-keychain" if File.exist? "ghostenv-keychain"
