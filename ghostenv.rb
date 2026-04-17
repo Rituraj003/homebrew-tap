@@ -10,21 +10,19 @@ class Ghostenv < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.0/ghostenv_0.1.0_darwin_amd64.tar.gz"
-      sha256 "ae9095e967c8f50e417a2a4f6273642812e007253021c244f4c24fc34e0e6d51"
+      sha256 "071cae2c87ce8665161a777fe7767152d35e1c2a79964012163b31b5078a7a13"
 
       define_method(:install) do
         bin.install "ghostenv"
-        bin.install "ghostenv-mcp"
         bin.install "ghostenv-keychain" if File.exist? "ghostenv-keychain"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.0/ghostenv_0.1.0_darwin_arm64.tar.gz"
-      sha256 "3d4d5649839d1dd89e784fece1b8c5b2effb9e9521c9b286925122b9f665b511"
+      sha256 "83d35771e7ba1c269e49b7f226b3026efa95a95a429770bd4fcf0065936c5a89"
 
       define_method(:install) do
         bin.install "ghostenv"
-        bin.install "ghostenv-mcp"
         bin.install "ghostenv-keychain" if File.exist? "ghostenv-keychain"
       end
     end
@@ -33,19 +31,17 @@ class Ghostenv < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.0/ghostenv_0.1.0_linux_amd64.tar.gz"
-      sha256 "3ccc33108a9679b0206a06c4b09c55169ec25b99591443c440135d1bfacfcf3d"
+      sha256 "e1ce91eb1ea274717fdee8864652d92a167032572973a0658c73747324a2a975"
       define_method(:install) do
         bin.install "ghostenv"
-        bin.install "ghostenv-mcp"
         bin.install "ghostenv-keychain" if File.exist? "ghostenv-keychain"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.0/ghostenv_0.1.0_linux_arm64.tar.gz"
-      sha256 "3deefd5583656063201eb99884ed027d8643db9852f7889e275145894af5e8e2"
+      sha256 "75997fb8f8b4739bdfae3e0af229824f7fde852829f23cb866a21daabbc3858e"
       define_method(:install) do
         bin.install "ghostenv"
-        bin.install "ghostenv-mcp"
         bin.install "ghostenv-keychain" if File.exist? "ghostenv-keychain"
       end
     end
