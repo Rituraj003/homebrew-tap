@@ -5,12 +5,12 @@
 class Ghostenv < Formula
   desc "Keep secrets away from AI agents"
   homepage "https://github.com/Rituraj003/ghostenv"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.0/ghostenv_0.1.0_darwin_amd64.tar.gz"
-      sha256 "662d3b00f1851701a9f6cb106e4aab892932018d5f96bcb3b081d1f6d58e1073"
+      url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.1/ghostenv_0.1.1_darwin_amd64.tar.gz"
+      sha256 "308fd02d941941722ede74aac47402ea1d7b18298b171f84c5915186f233ff0f"
 
       define_method(:install) do
         bin.install "ghostenv"
@@ -18,8 +18,8 @@ class Ghostenv < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.0/ghostenv_0.1.0_darwin_arm64.tar.gz"
-      sha256 "afe77b5bf9f2301e5a627766b90317b33a162fb7853657c0ad7e3f780415b10e"
+      url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.1/ghostenv_0.1.1_darwin_arm64.tar.gz"
+      sha256 "ebd3ef7c571231fe342574f09d23c711713608d9dd8a6802c452c456f30e370d"
 
       define_method(:install) do
         bin.install "ghostenv"
@@ -30,16 +30,16 @@ class Ghostenv < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.0/ghostenv_0.1.0_linux_amd64.tar.gz"
-      sha256 "6a7c7d799cfb839fa6f7e6e829ba5dfcf82f6f8b9c5ae31f5fa509dab4aa9212"
+      url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.1/ghostenv_0.1.1_linux_amd64.tar.gz"
+      sha256 "8f50d9bdfcedf63a08d57f49569eea9689024fed434cc1b3290dfe2f6b63b9ca"
       define_method(:install) do
         bin.install "ghostenv"
         bin.install "ghostenv-keychain" if File.exist? "ghostenv-keychain"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.0/ghostenv_0.1.0_linux_arm64.tar.gz"
-      sha256 "5c79766fda81115772657f40b035a58fe22c2966be81f03167bc884a02a04c55"
+      url "https://github.com/Rituraj003/ghostenv/releases/download/v0.1.1/ghostenv_0.1.1_linux_arm64.tar.gz"
+      sha256 "7567a5cbab4b7ce297f0446519c6bf7691e14ebe671e38129ad8246c601c487f"
       define_method(:install) do
         bin.install "ghostenv"
         bin.install "ghostenv-keychain" if File.exist? "ghostenv-keychain"
